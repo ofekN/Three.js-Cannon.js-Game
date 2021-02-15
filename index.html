@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+<meta name="theme-color" content="rgb(253, 78, 93)">
+    
+<title>Three&Cannon Game</title>
+</head>
+<style>
+*{
+    overflow-x: hidden  !important;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden  !important;
+    margin:0;
+    padding: 0;
+}
+.canvasID{
+    width: 100%;
+    height: 100%;
+    overflow: hidden  !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+#score{
+    color:#fafafa;
+    font-size: 2em;
+    position: absolute;
+    left: 5%;
+    width: 100%;
+    z-index: 99;
+}
+#healthBar{
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    background-color: #fff;
+    z-index: 99;
+    right: 5%;
+    top: 5%;
+}
+#camButton{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 90%;
+    left: 5%;
+    z-index: 99;
+    background-image: url('/0/cam.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+#hom{
+    position: fixedww;
+    top: 0%;
+    left:0%;
+    background-color:rgba(255, 255, 255, 0.246);
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#header{
+    position: relative;
+    top: 15%;
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+}
+
+</style>
+<header>
+
+</header>
+<body >
+
+    <div id="hom">
+        <h2 id='header'>Box Game</h2>
+    </div>
+    <div id="score"><p id='scoreText'>Points : <span id="points">0</span></p></div>
+    <div id="healthBar"></div>
+    <canvas class="canvasID"></canvas>
+    <div id="camButton"></div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js" integrity="sha512-LF8ZB1iTwi4Qvkm4pekHG4a437Y9Af5ZuwbnW4GTbAWQeR2E4KW8WF+xH8b9psevV7wIlDMx1MH9YfPqgKhA/Q==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js" integrity="sha512-avLcnGxl5mqAX/wIKERdb1gFNkOLHh2W5JNCfJm5OugpEPBz7LNXJJ3BDjjwO00AxEY1MqdNjtEmiYhKC0ld7g==" crossorigin="anonymous"></script>
+
+
+<script type="module" src="game.js"></script>
+
+</body>
